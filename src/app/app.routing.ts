@@ -3,12 +3,13 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './layout/dashboard/dashboard.component';
-import { UserProfileComponent } from './layout/user-profile/user-profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes =[
-    { path: '',  loadChildren: './layout/layout.module#LayoutModule' },
-    { path: 'login', loadChildren: './login/login.module#LoginModule' }
+    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'user-profile',   component: UserProfileComponent },
+    { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -18,7 +19,6 @@ const routes: Routes =[
     RouterModule.forRoot(routes)
   ],
   exports: [
-  RouterModule
   ],
 })
 export class AppRoutingModule { }

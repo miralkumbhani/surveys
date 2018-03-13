@@ -9,12 +9,16 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
-import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    DashboardComponent,
+    UserProfileComponent
+
   ],
   imports: [
     BrowserModule,

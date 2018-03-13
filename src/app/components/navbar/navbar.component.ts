@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 
     constructor(location: Location,  private element: ElementRef) {
       this.location = location;
-        this.sidebarVisible = false;
+          this.sidebarVisible = false;
     }
 
     ngOnInit(){
