@@ -70,6 +70,7 @@
   border-radius: 50%;
   margin-right: 5px;
 }
-.navbar-style {
+span{
   float: right !important;
+  margin-right: 10px !important;
 }
