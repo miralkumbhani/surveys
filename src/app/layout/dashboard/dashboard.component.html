@@ -39,9 +39,26 @@
                             <textarea id="moreinfo" name="more-info" placeholder="Other Notes..." rows="5" cols="50" formControlName="notes"></textarea>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary mr-1" (click)="resetConfigurationDetails()">Reset</button>
                     <button type="button" class="btn btn-primary ml-1" (click)="saveConfigurationDetails()">Save</button>
+                    <button type="button" class="btn btn-primary mr-1" (click)="resetConfigurationDetails()">Reset</button>
                 </form>
+            </div>
+        </div>
+        <br>
+        <div class="results" *ngIf="isSaveConfigDetails && detailsForm.valid">
+            <div class="card-container">
+                <div class="card card-flip text-center">
+                    <div class="card-body">
+                        <figure class="side">
+                            <h5 class="card-title card-title-flip">{{selelectedConfigurations.category}}</h5>
+                            <p class="card-text"><b>System Configuration/URL:</b> {{selelectedConfigurations.config_url}}</p>
+                        </figure>
+                        <figure class="side back">
+                            <p class="card-text"><b>Username:</b> {{selelectedConfigurations.username}}</p>
+                            <p class="card-text"><b>Password:</b>{{selelectedConfigurations.password}}</p>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
