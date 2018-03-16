@@ -61,6 +61,7 @@ export class LoginComponent implements OnInit {
         if(this.user.email === 'admin' && this.user.password === 'admin') {
             localStorage.setItem('authtoken', token);
             localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userName', this.user.email);
             router.navigate(['/dashboard']);
         } else {
             // this.messageService.getErrorMessage(Constants.INVALID_LOGIN_CODE);

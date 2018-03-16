@@ -15,6 +15,7 @@ import { SelectedConfigurations } from './configurations';
 })
 export class DashboardComponent implements OnInit {
     public selelectedConfigurations: SelectedConfigurations;
+    public user: User;
     public categories: string[] = [];
     public listOfSelectedConfig = [];
 
@@ -31,16 +32,27 @@ export class DashboardComponent implements OnInit {
         this.selelectedConfigurations = {category: '', config_url: '', username: '', password: '', notes: ''};
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        let key = localStorage.getItem('userName');
+        let storedData = JSON.parse(localStorage.getItem(key));
+        this.listOfSelectedConfig = storedData;
+    }
 
     saveConfigurationDetails() {
         this.selelectedConfigurations = this.detailsForm.value;
         if(this.detailsForm.valid) {
             this.listOfSelectedConfig.push(this.selelectedConfigurations);
+            this.saveDataInStore();
         }
     }
 
     resetConfigurationDetails() {
         this.detailsForm.reset();
+    }
+
+    saveDataInStore() {
+        let user = localStorage.getItem('userName');
+        let data = JSON.stringify(this.listOfSelectedConfig);
+        localStorage.setItem(user, data);
     }
 }
