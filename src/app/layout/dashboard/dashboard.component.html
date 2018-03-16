@@ -5,12 +5,9 @@
                 <b>Details</b>
             </div>
             <div class="card-body">
-                <!-- <h5 class="card-title">Special title treatment</h5> -->
-                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
                 <form [formGroup]="detailsForm" autocomplete="off">
                     <div class="row">
                         <div class="col-md-3">
-                            <!-- <p class="label">Categories:</p> -->
                             <mat-form-field>
                                 <mat-select class="dropdown" formControlName="category" placeholder="Categories">
                                     <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
@@ -21,15 +18,12 @@
                     <br>
                     <div class="row">
                         <div class="col-md-4">
-                            <!-- <p class="label">Configuration/URL:</p> -->
                             <input type="text" id="sysconfig" name="sysconfig" placeholder="System Configuration/URL" formControlName="config_url" required />
                         </div>
                         <div class="col-md-4">
-                            <!-- <p class="label">Username:</p> -->
                             <input type="text" id="username" name="username" placeholder="Username" formControlName="username" required />
                         </div>
                         <div class="col-md-4">
-                            <!-- <p class="label">Password:</p> -->
                             <input type="password" id="password" name="password" placeholder="Password" formControlName="password" required />
                         </div>
                     </div>
@@ -45,17 +39,18 @@
             </div>
         </div>
         <br>
-        <div class="results" *ngIf="isSaveConfigDetails && detailsForm.valid">
-            <div class="card-container">
+        <div class="results row" style="margin: auto;">
+            <div class="card-container col-md-3 mt-3 mb-3" *ngFor="let item of listOfSelectedConfig;">
                 <div class="card card-flip text-center">
                     <div class="card-body">
                         <figure class="side">
-                            <h5 class="card-title card-title-flip">{{selelectedConfigurations.category}}</h5>
-                            <p class="card-text"><b>System Configuration/URL:</b> {{selelectedConfigurations.config_url}}</p>
+                            <h5 class="card-title card-title-flip">{{item.category}}</h5>
+                            <p class="card-text-flip"><b>System Configuration/URL:</b> {{item.config_url}}</p>
+                            <p class="card-text-flip"><b>Other Notes:</b> {{item.notes || '-'}}</p>
                         </figure>
                         <figure class="side back">
-                            <p class="card-text"><b>Username:</b> {{selelectedConfigurations.username}}</p>
-                            <p class="card-text"><b>Password:</b>{{selelectedConfigurations.password}}</p>
+                            <p class="card-text"><b>Username:</b> {{item.username}}</p>
+                            <p class="card-text"><b>Password:</b> {{item.password}}</p>
                         </figure>
                     </div>
                 </div>

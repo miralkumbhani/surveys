@@ -16,7 +16,7 @@ import { SelectedConfigurations } from './configurations';
 export class DashboardComponent implements OnInit {
     public selelectedConfigurations: SelectedConfigurations;
     public categories: string[] = [];
-    public isSaveConfigDetails: boolean = false;
+    public listOfSelectedConfig = [];
 
     detailsForm: FormGroup;
     constructor(private fb: FormBuilder) {
@@ -31,25 +31,16 @@ export class DashboardComponent implements OnInit {
         this.selelectedConfigurations = {category: '', config_url: '', username: '', password: '', notes: ''};
     }
 
-    ngOnInit() {
-        this.isSaveConfigDetails = false;
-    }
+    ngOnInit() {}
 
     saveConfigurationDetails() {
-        debugger;
         this.selelectedConfigurations = this.detailsForm.value;
-        console.log("this.selelectedConfigurations", this.selelectedConfigurations);
         if(this.detailsForm.valid) {
-            this.createCards();
+            this.listOfSelectedConfig.push(this.selelectedConfigurations);
         }
     }
 
     resetConfigurationDetails() {
         this.detailsForm.reset();
     }
-
-    createCards() {
-        this.isSaveConfigDetails = true;
-    }
-
 }
