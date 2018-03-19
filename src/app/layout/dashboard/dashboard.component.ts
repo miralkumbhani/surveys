@@ -40,6 +40,7 @@ export class DashboardComponent implements OnInit {
 
     saveConfigurationDetails() {
         this.selelectedConfigurations = this.detailsForm.value;
+        this.listOfSelectedConfig = this.listOfSelectedConfig || [];
         if(this.detailsForm.valid) {
             this.listOfSelectedConfig.push(this.selelectedConfigurations);
             this.saveDataInStore();
@@ -54,5 +55,18 @@ export class DashboardComponent implements OnInit {
         let user = localStorage.getItem('userName');
         let data = JSON.stringify(this.listOfSelectedConfig);
         localStorage.setItem(user, data);
+    }
+
+
+    showPassword(event) {
+        let buttonId = event.target.id;
+        console.log("buttonId", buttonId);
+        let id = buttonId.split("-");
+        let divElement = document.getElementById('password-' + id[1]);
+        if(divElement.style.display === 'none'){
+            divElement.style.display = 'block';
+        } else {
+            divElement.style.display = 'none';
+        }
     }
 }

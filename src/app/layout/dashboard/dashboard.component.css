@@ -5,7 +5,7 @@ form {
   margin: 20px;
   padding: 20px;
 }
-html, body, button, input, select, textarea {
+html, body, input, select, textarea {
   font: 400 11.42857px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #444;
   letter-spacing: 0.5px;
@@ -18,7 +18,7 @@ body {
 .root h1 {
   text-align: center;
 }
-button[type=button] {
+.button-style {
   width: 90px;
   height: 45px;
   padding: 0;
@@ -35,6 +35,20 @@ button[type=button] {
   -webkit-box-shadow: inset 0 -2px #296baf;
   box-shadow: inset 0 -2px #296baf;
   text-transform: none !important;
+}
+.btn-password {
+  width: 60px;
+  height: 30px;
+  font-size: 12px !important;
+  color: white;
+  outline-color: unset;
+  text-align: center;
+  background: #5193d6;
+  border: 0 !important;
+  cursor: pointer;
+  text-transform: none !important;
+  float: none !important;
+  display: inline-block !important;
 }
 * {
   box-sizing: border-box;
@@ -153,4 +167,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 .card-text-flip {
   padding: 2px !important;
+}
+.header-style {
+  color: white;
+}
+.line-height {
+  height: 20px;
 }
