@@ -22,6 +22,10 @@ In order to start the project:
 The app will automatically reload if you change any of the source files. <br />
 `$ npm start`
 
+# Credentials:
+Username: admin
+Password: admin
+
 # Known Issues:
 
 The project will run smoothlessly in <b>Chrome</b> Browser. Whereas, it'll not work as expected in Firefox or IE, as `backface-visibility: hidden;` is a noted issue by the above mentioned browsers.
