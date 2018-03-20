@@ -1,0 +1,201 @@
+main {
+  display: block;
+}
+form {
+  margin: 20px;
+  padding: 20px;
+}
+html, body, input, select, textarea {
+  font: 400 11.42857px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #f1f2f1;
+  /*margin: 50px 0 0;*/
+}
+.root h1 {
+  text-align: center;
+}
+.button-style {
+  width: 90px;
+  height: 45px;
+  padding: 0;
+  font-size: 18px;
+  color: white;
+  outline-color: unset;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #5193d6;
+  border: 0;
+  border-bottom: 2px solid #296baf;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #296baf;
+  box-shadow: inset 0 -2px #296baf;
+  text-transform: none !important;
+}
+.btn-password {
+  width: 60px;
+  height: 30px;
+  font-size: 12px !important;
+  color: white;
+  outline-color: unset;
+  text-align: center;
+  background: #5193d6;
+  border: 0 !important;
+  cursor: pointer;
+  text-transform: none !important;
+  float: none !important;
+  display: inline-block !important;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.error {
+  font-size: 13px;
+  color: #c7254e;
+  background: #f9f2f4;
+  border-radius: 3px;
+  padding: 15px;
+  margin: -26px 0 15px;
+}
+label {
+  display: block;
+}
+span {
+  display: block;
+  margin: 0 0 10px;
+}
+#sysconfig {
+  outline: 0;
+  width: 343px;
+  min-width: 180px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 5px 2px;
+  font-size: 15px;
+  background: #fff;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+}
+#username, #password {
+  outline: 0;
+  width: 200px;
+  min-width: 180px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 5px 2px;
+  font-size: 15px;
+  background: #fff;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+}
+textarea {
+  outline: 0;
+  width: 550px;
+  min-width: 180px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 5px 2px;
+  font-size: 15px;
+  background: #fff;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+}
+input:focus {
+  border-color: #62c2e4;
+  outline: none;
+  -webkit-box-shadow: inset 0 -2px #62c2e4;
+  box-shadow: inset 0 -2px #62c2e4;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.example-margin {
+  margin: 0 10px;
+}
+.title-color {
+  color: #666 !important;
+}
+.margin-auto {
+  margin: auto !important;
+}
+.main {
+  margin-top: 30px;
+}
+.label {
+  padding-top: 9px;
+  padding-right: 2px;
+  font-weight: bold;
+}
+#username {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card-container {
+  width: 280px !important;
+  height: 170px !important;
+  cursor: pointer;
+  perspective: 600;
+  position: relative;
+  backface-visibility: hidden;
+}
+.card-flip {
+  height: 100%;
+  /*position: absolute;*/
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card-flip:hover {
+  transform: rotateY(180deg);
+}
+.card-flip .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card-flip .back {
+  margin-top: 30px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.side, .back {
+  /*display:flex;*/
+    align-items: center;
+    justify-content:center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+.card-title-flip {
+  font-weight: bolder;
+}
+.card-text-flip {
+  padding: 2px !important;
+}
+.header-style {
+  color: white;
+}
+.line-height {
+  height: 20px;
+}

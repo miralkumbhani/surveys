@@ -1,0 +1,31 @@
+<div class="login-page" [ngStyle]="{'display': !showLogin ? 'none' : '' }">
+    <ng2-toasty [position]="'top-center'" class="col-md-4 fail"></ng2-toasty>
+    <div class="row">
+        <div class="col-md-5 outer-background">
+            <p class="mt-4">Welcome to Smart Locker</p>
+            <form role="form" class="form-details" [formGroup]="loginForm" autocomplete="off">
+                <div class="form-content">
+                    <div class="input-group">
+                        <p class="input-group-addon btn-transparent" id="basic-addon1"><img src="../../assets/img/user.png" width="20px" height="20px"></p>
+                        <input type="text" class="form-control input-box input-lg" id="email" required formControlName="email" name="email" placeholder="Email" aria-describedby="basic-addon1" autofocus>
+                    </div>
+                    <div class="line-height">
+                        <div *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" class="error">
+                            Username is required
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <p class="input-group-addon btn-transparent" id="basic-addon2"><img src="../../assets/img/password.png" width="20px" height="20px"></p>
+                        <input type="password" class="form-control input-box input-lg" id="password" required formControlName="password" name="password" placeholder="Password" aria-describedby="basic-addon2">
+                    </div>
+                    <div class="line-height">
+                        <div *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched" class="error">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-login btn-text mt-3 mb-3" (click)="onLoggedin()">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
