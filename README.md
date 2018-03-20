@@ -21,3 +21,7 @@ In order to start the project:
 4. watches your files and uses livereload by default run `npm start`. Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files. <br />
 `$ npm start`
+
+# Known Issues:
+
+The project will run smoothlessly in <b>Chrome</b> Browser. Whereas, it'll not work as expected in Firefox or IE, as `backface-visibility: hidden;` is a noted issue by the above mentioned browsers.
