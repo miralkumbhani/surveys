@@ -129,7 +129,7 @@ input {
   height: 45px;
 }
 .btn-text {
-  color: #666 !important;
+  color: white !important;
 }
 #email, #password {
   font-color: #666 !important;

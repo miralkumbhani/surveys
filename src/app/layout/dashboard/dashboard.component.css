@@ -199,3 +199,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .line-height {
   height: 20px;
 }
+.password {
+  display: none;
+}

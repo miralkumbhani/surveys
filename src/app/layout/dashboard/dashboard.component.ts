@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
     public user: User;
     public categories: string[] = [];
     public listOfSelectedConfig = [];
+    public divElement;
 
     detailsForm: FormGroup;
     constructor(private fb: FormBuilder) {
@@ -61,11 +62,11 @@ export class DashboardComponent implements OnInit {
     showPassword(event) {
         let buttonId = event.target.id;
         let id = buttonId.split("-");
-        let divElement = document.getElementById('password-' + id[1]);
-        if(divElement.style.display === 'none'){
-            divElement.style.display = 'block';
+        this.divElement = document.getElementById('password-' + id[1]);
+        if(this.divElement.style.display === 'none' || this.divElement.style.display === ""){
+            this.divElement.style.display = 'block';
         } else {
-            divElement.style.display = 'none';
+            this.divElement.style.display = 'none';
         }
     }
 }
