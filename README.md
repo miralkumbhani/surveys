@@ -23,7 +23,7 @@ The app will automatically reload if you change any of the source files. <br />
 `$ npm start`
 
 # Credentials:
-Username: admin
+Username: admin <br />
 Password: admin
 
 # Known Issues:
