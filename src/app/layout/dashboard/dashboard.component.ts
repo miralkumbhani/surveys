@@ -60,7 +60,6 @@ export class DashboardComponent implements OnInit {
 
     showPassword(event) {
         let buttonId = event.target.id;
-        console.log("buttonId", buttonId);
         let id = buttonId.split("-");
         let divElement = document.getElementById('password-' + id[1]);
         if(divElement.style.display === 'none'){

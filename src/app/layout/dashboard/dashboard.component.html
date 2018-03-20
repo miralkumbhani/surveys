@@ -17,10 +17,10 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <input type="text" id="sysconfig" name="sysconfig" placeholder="System Configuration/URL" formControlName="config_url" required />
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <input type="text" id="username" name="username" placeholder="Username" formControlName="username" required />
                         </div>
                         <div class="col-md-4">
@@ -43,20 +43,20 @@
             <div class="card-container col-md-3 mt-3 mb-3" *ngFor="let item of listOfSelectedConfig; let i = index;">
                 <div class="card card-flip text-center" id="{{'card-' + i}}">
                     <div class="card-body">
-                        <figure class="side">
+                        <div class="side">
                             <h5 class="card-title card-title-flip">{{item.category}}</h5>
                             <p class="card-text-flip"><b>System Configuration/URL:</b> {{item.config_url}}</p>
                             <p class="card-text-flip"><b>Other Notes:</b> {{item.notes || '-'}}</p>
-                        </figure>
-                        <figure class="side back">
+                        </div>
+                        <div class="side back">
                             <b>Username:</b> {{item.username}}
                             <br>
                             <b>Password:</b>
                             <div class="line-height">
                                 <p class="card-text" id="{{'password-' + i}}"> {{item.password}} </p>
                             </div>
-                                <button type="button" id="{{'button-' + i}}" class="btn-password" (click)="showPassword($event)">Click!</button>
-                        </figure>
+                                <button type="button" id="{{'button-' + i}}" class="btn-password mt-2 header-style" (click)="showPassword($event)">Click!</button>
+                        </div>
                     </div>
                 </div>
             </div>
