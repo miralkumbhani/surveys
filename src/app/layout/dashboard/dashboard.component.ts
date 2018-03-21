@@ -57,6 +57,7 @@ export class DashboardComponent implements OnInit {
         let user = localStorage.getItem('userName');
         let data = JSON.stringify(this.listOfSelectedConfig);
         localStorage.setItem(user, data);
+        this.detailsForm.reset();
     }
 
     flipCardOnClick(event, id) {

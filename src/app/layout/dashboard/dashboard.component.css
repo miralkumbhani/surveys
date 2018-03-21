@@ -39,7 +39,7 @@ body {
   width: 60px !important;
   height: 30px !important;
   font-size: 12px !important;
-  color: white;
+  color: white !important;
   outline-color: unset;
   text-align: center;
   background: #5193d6;
@@ -48,7 +48,6 @@ body {
   text-transform: none !important;
   float: none !important;
   display: inline-block !important;
-  color: white;
 }
 * {
   box-sizing: border-box;
@@ -201,6 +200,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 .header-style {
   color: white;
+  background: #5193d6 !important;
 }
 .line-height {
   height: 20px;
