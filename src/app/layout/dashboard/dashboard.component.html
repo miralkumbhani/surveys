@@ -41,7 +41,7 @@
         <br>
         <div class="results row" style="margin: auto;">
             <div class="card-container col-md-3 mt-3 mb-3" *ngFor="let item of listOfSelectedConfig; let i = index;">
-                <div class="card card-flip text-center" id="{{'card-' + i}}">
+                <div class="card card-flip text-center" id="{{'card-' + i}}" (click)="flipCardOnClick($event, 'card-' + i)">
                     <div class="card-body">
                         <div class="side">
                             <h5 class="card-title card-title-flip">{{item.category}}</h5>
@@ -55,7 +55,7 @@
                             <div class="line-height">
                                 <p class="card-text password" id="{{'password-' + i}}"> {{item.password}} </p>
                             </div>
-                                <button type="button" id="{{'button-' + i}}" class="btn-password mt-2 header-style" (click)="showPassword($event)">Show!</button>
+                            <button type="button" id="{{'button-' + i}}" class="btn-password mt-2 header-style">Show!</button>
                         </div>
                     </div>
                 </div>

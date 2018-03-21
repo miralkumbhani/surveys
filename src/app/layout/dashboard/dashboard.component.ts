@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
     public categories: string[] = [];
     public listOfSelectedConfig = [];
     public divElement;
+    public status: boolean = false;
 
     detailsForm: FormGroup;
     constructor(private fb: FormBuilder) {
@@ -58,15 +59,26 @@ export class DashboardComponent implements OnInit {
         localStorage.setItem(user, data);
     }
 
-
-    showPassword(event) {
-        let buttonId = event.target.id;
-        let id = buttonId.split("-");
-        this.divElement = document.getElementById('password-' + id[1]);
-        if(this.divElement.style.display === 'none' || this.divElement.style.display === ""){
-            this.divElement.style.display = 'block';
+    flipCardOnClick(event, id) {
+        let htmlElement = event.target.nodeName;
+        if(htmlElement === 'BUTTON') {
+            let buttonId = event.target.id;
+            let id = buttonId.split("-");
+            this.divElement = document.getElementById('password-' + id[1]);
+            if(this.divElement.style.display === 'none' || this.divElement.style.display === ""){
+                this.divElement.style.display = 'block';
+            } else {
+                this.divElement.style.display = 'none';
+            }
         } else {
-            this.divElement.style.display = 'none';
+        let cardElement = document.getElementById(id);
+            if(id != null) {
+                if(!cardElement.classList.contains("card-flip-click")) {
+                    cardElement.classList.add("card-flip-click");
+                } else {
+                    cardElement.classList.remove("card-flip-click");
+                }
+            }
         }
     }
 }

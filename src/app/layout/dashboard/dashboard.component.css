@@ -13,7 +13,6 @@ html, body, input, select, textarea {
 }
 body {
   background: #f1f2f1;
-  /*margin: 50px 0 0;*/
 }
 .root h1 {
   text-align: center;
@@ -37,8 +36,8 @@ body {
   text-transform: none !important;
 }
 .btn-password {
-  width: 60px;
-  height: 30px;
+  width: 60px !important;
+  height: 30px !important;
   font-size: 12px !important;
   color: white;
   outline-color: unset;
@@ -156,12 +155,11 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 .card-flip {
   height: 100%;
-  /*position: absolute;*/
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
 }
-.card-flip:hover {
+.card-flip-click {
   transform: rotateY(180deg);
 }
 .card-flip .side {
@@ -178,7 +176,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   transform: rotateY(180deg);
 }
 .side, .back {
-  /*display:flex;*/
     align-items: center;
     justify-content:center;
     position: absolute;
@@ -186,6 +183,15 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     height: 100%;
     backface-visibility: hidden;
     transform: rotateX(0deg);
+}
+.back-flip {
+  align-items: center !important;
+  justify-content:center !important;;
+  position: absolute !important;
+  width: 60px !important;
+  height: 45px !important;
+  backface-visibility: hidden !important;
+  transform: rotateX(0deg) !important;
 }
 .card-title-flip {
   font-weight: bolder;
